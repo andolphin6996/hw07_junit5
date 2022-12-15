@@ -1,6 +1,5 @@
 package dns;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
@@ -31,7 +30,7 @@ public class ParametrizedTest {
     @ParameterizedTest(name = "Проверка отображения соответсвуюшего товара {1}" +
             "при поиске основного {0}")
     @Tags({@Tag("BLOCKER"), @Tag("Critical")})
-    void CsvTest(String subject, String result) {
+    void csvTest(String subject, String result) {
         MainPage.chooseSubject(subject);
         SubjectPage.checkSubject(result);
     }
